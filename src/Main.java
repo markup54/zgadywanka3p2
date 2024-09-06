@@ -28,6 +28,13 @@ public class Main {
         System.out.println("Podaj liczbę");
         int wpisanaLiczba = klawiatura.nextInt();
 
-
+        //instrukcja warunkowa
+        if(wpisanaLiczba == wylosowanaLiczba){
+            System.out.println("Wygrana");
+        }
+        else{
+            System.out.println("Pudło");
+        }
+        //
     }
 }
