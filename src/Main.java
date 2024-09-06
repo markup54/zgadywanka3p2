@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Hello world!");
         System.out.println("na lekcji programowania");
 
-        int wylosowanaLiczba = (int) (Math.random()*100+1);
+        int wylosowanaLiczba = (int) (Math.random() * 100 + 1);
         //rzutowanie
         /*
         typy proste przechowują tylko wartość
@@ -29,21 +29,20 @@ public class Main {
         int wpisanaLiczba = klawiatura.nextInt();
 
         //instrukcja warunkowa
-        if(wpisanaLiczba == wylosowanaLiczba){
+        if (wpisanaLiczba == wylosowanaLiczba) {
             System.out.println("Wygrana");
-        }
-        else{
+        } else {
             System.out.println("Pudło");
         }
         //określić jak duża różnica pomiędzy wpisaną i wylosowaną
         //wyrażenie warunkowe zwraca wartośc
-        int roznica = wpisanaLiczba >wylosowanaLiczba
+        int roznica = wpisanaLiczba > wylosowanaLiczba
                 ? wpisanaLiczba - wylosowanaLiczba
                 : wylosowanaLiczba - wpisanaLiczba;
-        System.out.println("Pomyłka o "+roznica);
+        System.out.println("Pomyłka o " + roznica);
 
-        roznica = roznica/10;//dzielenie calkowite
-        switch (roznica){
+        roznica = roznica / 10;//dzielenie calkowite
+        switch (roznica) {
             case 0:
                 System.out.println("Bardzo blisko");
                 break;
@@ -56,5 +55,14 @@ public class Main {
             default:
                 System.out.println("Słabo");
         }
+        //wyrażenie  switch
+        System.out.println(
+                switch (roznica){
+                    case 0->"Bardzo dobrze";
+                    case 1->"Dobrze";
+                    case 2->"Dość dobrze";
+                    default -> "Słabo";
+                }
+        );
     }
 }
