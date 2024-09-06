@@ -41,5 +41,20 @@ public class Main {
                 ? wpisanaLiczba - wylosowanaLiczba
                 : wylosowanaLiczba - wpisanaLiczba;
         System.out.println("Pomyłka o "+roznica);
+
+        roznica = roznica/10;//dzielenie calkowite
+        switch (roznica){
+            case 0:
+                System.out.println("Bardzo blisko");
+                break;
+            case 1:
+                System.out.println("Blisko");
+                break;
+            case 2:
+                System.out.println("Dość blisko");
+                break;
+            default:
+                System.out.println("Słabo");
+        }
     }
 }
